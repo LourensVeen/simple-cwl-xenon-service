@@ -74,4 +74,4 @@ Deployment options
         service can connect to the compute resource, but no other connections are
         possible.
 
-.. _`Netherlands eScience Center version of the GA4GH workflow execution schema`: https://github.com/NLeSC/workflow-execution-schemas)
+.. _`Netherlands eScience Center version of the GA4GH workflow execution schema`: https://github.com/NLeSC/workflow-execution-schemas

@@ -45,30 +45,30 @@ installation is created as follows:
 
 clone the repository
     `git clone git@github.com:MD-Studio/cerise.git`
+
 change into the top-level directory
     `cd cerise`
+
 install using
     `pip3 install .`
 
 Steps and supporting files may then be placed in the api/ directory to
-specialise the service. For a detailed explanation, see docs/specialising.rst.
+specialise the service. For a detailed explanation, see http://cerise.readthedocs.io/en/develop/specialising.html.
 
 To build the Docker image, use
-
     `docker build -t cerise .`
 
 and then start a container using
-
     `docker run --name=cerise -p 29593:29593 cerise`
 
-Note that the docker image gets its config.yml from conf/docker-config.yml in
+Note that the docker image gets its `config.yml` from `conf/docker-config.yml` in
 the source tree.
 
 However, this will run a plain, unspecialised Cerise, which is not very
 useful, as it runs jobs locally inside the container, and it doesn't contain any
 steps to execute. To use Cerise in Docker, you should make a new, specialised
 Docker image based on the standard Cerise image, and start that instead.
-Instructions for how to do so are also in docs/specialising.rst
+Please refer to http://cerise.readthedocs.io/en/develop/specialising.html for further instructions.
 
 
 Dependencies
@@ -76,14 +76,14 @@ Dependencies
  * Python 3.5 or up
 
 On the compute resource:
- * Python 2.7 and CWLTool (or another CWL runner), or
- * Python3 (using the built-in CWLTiny runner)
+ * Python 2.7 with CWL runner (e.g. [CWLTool](https://github.com/common-workflow-language/cwltool)) or
+ * Python 3 with a built-in CWL runner (CWLTiny)
 
 Example usage
 -------------
 
-In the examples/ directory, you will find some example Python scripts that
-create jobs and execute them on the job running service.
+In the `examples` directory, you will find some example Python scripts that
+create and execute jobs on the running service.
 
 Contribution guide
 ------------------
